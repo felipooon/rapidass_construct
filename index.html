@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="es" class="h-full antialiased scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rapidassure Retail | Sitio en Construcción</title>
+
+  <!-- Google Fonts: Plus Jakarta Sans & Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              blueDeep: '#134098',
+              blueMid: '#1F6BC9',
+              blueLight: '#65A9E8',
+              gold: '#F4B000',
+              goldDark: '#D88A00',
+              orangeAccent: '#F26E20',
+              neutralDark: '#0F172A',
+              neutralSub: '#475569',
+              borderLight: '#E2E8F0',
+              bgSoft: '#F8FAFC'
+            }
+          },
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'Inter', 'sans-serif'],
+            body: ['Inter', 'sans-serif'],
+          },
+          boxShadow: {
+            'soft': '0 4px 20px -2px rgba(15, 23, 42, 0.05), 0 2px 6px -2px rgba(15, 23, 42, 0.03)',
+            'input': '0 2px 8px -2px rgba(19, 64, 152, 0.06)'
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    /* Ambient minimalist background */
+    .ambient-bg {
+      background-color: #FFFFFF;
+      background-image: 
+        radial-gradient(circle at 50% 0%, rgba(101, 169, 232, 0.08) 0%, transparent 50%),
+        radial-gradient(circle at 85% 30%, rgba(244, 176, 0, 0.06) 0%, transparent 45%);
+    }
+
+    @keyframes softPulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.55; transform: scale(1.18); }
+    }
+    .pulse-dot {
+      animation: softPulse 2.2s ease-in-out infinite;
+    }
+  </style>
+</head>
+
+<body class="min-h-screen ambient-bg font-sans text-brand-neutralDark flex flex-col justify-between selection:bg-brand-blueDeep selection:text-white">
+
+  <header class="w-full max-w-4xl mx-auto px-6 pt-8 sm:pt-10 flex items-center justify-between">
+    <!-- Status badge -->
+    <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-slate-100/90 border border-slate-200/80 text-xs font-medium text-slate-700 backdrop-blur-sm">
+      <span class="w-2 h-2 rounded-full bg-amber-500 pulse-dot"></span>
+      <span>Sitio web en renovación</span>
+    </div>
+
+    <!-- Direct WhatsApp Contact -->
+    <a 
+      href="https://wa.me/56912345678?text=Hola%20Rapidassure,%20necesito%20hacer%20una%20consulta%20o%20cotización."
+      target="_blank" 
+      rel="noopener noreferrer"
+      class="text-xs sm:text-sm font-semibold text-slate-600 hover:text-brand-blueDeep transition-colors inline-flex items-center gap-2"
+    >
+      <i class="fa-brands fa-whatsapp text-emerald-600 text-sm"></i>
+      <span class="hidden sm:inline">Ventas & Cotizaciones</span>
+      <span class="sm:hidden font-medium">WhatsApp</span>
+    </a>
+  </header>
+
+  <main class="w-full max-w-2xl mx-auto px-6 py-14 sm:py-20 text-center flex-grow flex flex-col items-center justify-center">
+
+    <!-- Official Logo Block -->
+    <div class="mb-8 w-full flex justify-center">
+      <div class="max-w-[290px] sm:max-w-[340px] w-full">
+        <!-- Logo Image with vector fallback -->
+        <img 
+          src="Logo_horizontal.png" 
+          alt="Rapidassure Retail" 
+          class="w-full h-auto object-contain mx-auto transition-transform duration-300 hover:scale-[1.01]"
+          onerror="this.style.display='none'; document.getElementById('vector-logo-fallback').classList.remove('hidden');"
+        >
+
+        <!-- Precision SVG Fallback based on Logo_horizontal -->
+        <div id="vector-logo-fallback" class="hidden w-full flex items-center justify-center select-none">
+          <svg viewBox="0 0 460 130" class="w-full max-w-[340px] h-auto" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Rapidassure Retail Logo">
+            <defs>
+              <linearGradient id="blueRibbon" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#123E96" />
+                <stop offset="50%" stop-color="#1C68C7" />
+                <stop offset="100%" stop-color="#5EA8EB" />
+              </linearGradient>
+              <linearGradient id="goldSwoosh" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#E57D18" />
+                <stop offset="60%" stop-color="#F7BA00" />
+                <stop offset="100%" stop-color="#FFCE2B" />
+              </linearGradient>
+            </defs>
+            <path d="M 38 102 L 68 32 L 98 32 C 114 32 124 42 122 56 C 120 68 110 76 96 76 L 80 76 L 68 102 Z" fill="url(#blueRibbon)" />
+            <path d="M 68 70 L 88 70 C 96 70 102 66 103 60 C 104 54 99 50 91 50 L 76 50 Z" fill="#FFFFFF" />
+            <path d="M 72 68 L 105 102 L 84 102 L 60 78 Z" fill="#133D8C" />
+            <path d="M 52 108 C 94 108 130 86 140 38 C 132 68 104 92 64 96 Z" fill="url(#goldSwoosh)" />
+            <path d="M 124 102 L 152 38 C 157 28 170 28 177 38 L 205 102 L 180 102 L 164 62 L 148 102 Z" fill="url(#blueRibbon)" />
+            
+            <text x="215" y="74" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-weight="800" font-size="33" fill="#F4B000" letter-spacing="1">RAPIDASSURE</text>
+            <text x="305" y="100" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-weight="600" font-size="15" fill="#E88B16" letter-spacing="3.5">RETAIL</text>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Clean Headings -->
+    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight leading-[1.2]">
+      Estamos renovando nuestra tienda online
+    </h1>
+
+    <p class="mt-4 text-base sm:text-lg text-brand-neutralSub max-w-lg font-normal leading-relaxed">
+      Muy pronto podrás explorar nuestro catálogo completo en tecnología, controles para videojuegos y accesorios, tanto para público general como empresas.
+    </p>
+
+    <div class="mt-8 w-full max-w-md">
+      <form id="notify-form" onsubmit="handleNotify(event)" class="relative">
+        <div class="flex flex-col sm:flex-row items-center gap-2 p-1.5 bg-white border border-slate-200/90 rounded-2xl shadow-soft transition-all focus-within:border-brand-blueMid focus-within:ring-2 focus-within:ring-brand-blueMid/20">
+          
+          <div class="flex items-center w-full pl-3 pr-2 py-1">
+            <i class="fa-regular fa-envelope text-slate-400 text-sm mr-2.5"></i>
+            <input 
+              type="email" 
+              id="notify-email" 
+              required 
+              placeholder="Tu correo electrónico..."
+              class="w-full bg-transparent text-sm text-slate-800 placeholder-slate-400 focus:outline-none"
+            >
+          </div>
+
+          <button 
+            type="submit"
+            class="w-full sm:w-auto px-5 py-2.5 rounded-xl bg-slate-900 hover:bg-brand-blueDeep text-white text-xs sm:text-sm font-semibold transition-all duration-200 shadow-sm whitespace-nowrap active:scale-98"
+          >
+            Avisarme
+          </button>
+        </div>
+        <p id="form-feedback" class="mt-2 text-xs font-medium min-h-[16px] text-emerald-600 transition-opacity duration-200"></p>
+      </form>
+    </div>
+
+    <!-- Direct quotation link -->
+    <div class="mt-4 text-xs text-slate-500 font-medium flex items-center justify-center gap-1.5">
+      <span>¿Necesitas una cotización urgente?</span>
+      <a 
+        href="https://wa.me/56912345678?text=Hola%20Rapidassure,%20necesito%20una%20cotización%20inmediata." 
+        target="_blank" 
+        rel="noopener noreferrer"
+        class="text-brand-blueDeep hover:text-brand-blueMid font-semibold hover:underline inline-flex items-center gap-1"
+      >
+        Escríbenos aquí <i class="fa-solid fa-arrow-right text-[10px]"></i>
+      </a>
+    </div>
+
+  </main>
+
+  <footer class="w-full border-t border-slate-200/60 bg-white/70 backdrop-blur-sm py-6 px-6">
+    <div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4 text-slate-500 text-xs">
+      
+      <!-- Subtle Trust Indicators -->
+      <div class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 font-medium text-slate-600">
+        <span class="inline-flex items-center gap-1.5">
+          <i class="fa-solid fa-truck text-brand-blueMid text-xs"></i> Envíos Bluexpress
+        </span>
+        <span class="inline-flex items-center gap-1.5">
+          <i class="fa-solid fa-shield-halved text-emerald-600 text-xs"></i> Pagos WebPay Plus
+        </span>
+        <span class="inline-flex items-center gap-1.5">
+          <i class="fa-solid fa-file-invoice text-amber-500 text-xs"></i> Boleta y Factura
+        </span>
+      </div>
+
+      <!-- Copyright -->
+      <div class="text-slate-400 text-center md:text-right">
+        © <span id="current-year"></span> Rapidassure Retail.
+      </div>
+
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('current-year').textContent = new Date().getFullYear();
+
+    function handleNotify(event) {
+      event.preventDefault();
+      const emailInput = document.getElementById('notify-email');
+      const feedback = document.getElementById('form-feedback');
+      const email = emailInput.value.trim();
+
+      if (!email) return;
+
+      try {
+        const list = JSON.parse(localStorage.getItem('rapidassure_notify_list') || '[]');
+        if (!list.includes(email)) {
+          list.push(email);
+          localStorage.setItem('rapidassure_notify_list', JSON.stringify(list));
+        }
+      } catch (err) {
+        console.warn(err);
+      }
+
+      feedback.textContent = '✓ ¡Gracias! Te avisaremos apenas estemos en línea.';
+      emailInput.value = '';
+
+      setTimeout(() => {
+        feedback.textContent = '';
+      }, 5000);
+    }
+  </script>
+</body>
+</html>
